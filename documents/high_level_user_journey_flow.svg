@@ -1,0 +1,380 @@
+<svg viewBox="0 0 1600 2800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="800" y="35" font-size="32" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    ChronoTrace - User Journey Flow
+  </text>
+  <text x="800" y="65" font-size="16" text-anchor="middle" fill="#666">
+    High-Level AI Agents & Operations with Real Examples
+  </text>
+  
+  <!-- AI AGENTS OVERVIEW -->
+  <rect x="50" y="100" width="1500" height="280" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3" rx="10"/>
+  <text x="800" y="130" font-size="22" font-weight="bold" text-anchor="middle">AI AGENTS & THEIR RESPONSIBILITIES</text>
+  
+  <!-- Agent 1: Video Processing Agent -->
+  <rect x="80" y="150" width="350" height="200" fill="#fff" stroke="#4CAF50" stroke-width="2" rx="8"/>
+  <text x="255" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="#2E7D32">🎬 Video Processing Agent</text>
+  <text x="255" y="205" font-size="13" font-weight="bold" text-anchor="middle">Technology: FFmpeg + OpenCV</text>
+  
+  <text x="90" y="230" font-size="11" font-weight="bold">Operations:</text>
+  <text x="95" y="248" font-size="10">1. Splits videos into 15-second segments</text>
+  <text x="95" y="263" font-size="10">2. Extracts thumbnails at 3-second mark</text>
+  <text x="95" y="278" font-size="10">3. Separates audio from video</text>
+  <text x="95" y="293" font-size="10">4. Analyzes video properties (fps, resolution)</text>
+  <text x="95" y="308" font-size="10">5. Stores processed files in S3</text>
+  
+  <text x="255" y="330" font-size="9" text-anchor="middle" fill="#1B5E20" font-weight="bold">
+    Output: 15s video chunks + thumbnails + audio files
+  </text>
+  
+  <!-- Agent 2: Privacy Guardian Agent -->
+  <rect x="460" y="150" width="350" height="200" fill="#fff" stroke="#9C27B0" stroke-width="2" rx="8"/>
+  <text x="635" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="#6A1B9A">🔒 Privacy Guardian Agent</text>
+  <text x="635" y="205" font-size="13" font-weight="bold" text-anchor="middle">Technology: MediaPipe</text>
+  
+  <text x="470" y="230" font-size="11" font-weight="bold">Operations:</text>
+  <text x="475" y="248" font-size="10">1. Detects faces in each frame</text>
+  <text x="475" y="263" font-size="10">2. Identifies license plates</text>
+  <text x="475" y="278" font-size="10">3. Applies Gaussian blur (99x99 kernel)</text>
+  <text x="475" y="293" font-size="10">4. Logs PII locations (for authorized reveal)</text>
+  <text x="475" y="308" font-size="10">5. Creates privacy-safe versions</text>
+  
+  <text x="635" y="330" font-size="9" text-anchor="middle" fill="#4A148C" font-weight="bold">
+    Output: Blurred videos + PII metadata for audit
+  </text>
+  
+  <!-- Agent 3: Embedding Generator Agent -->
+  <rect x="840" y="150" width="350" height="200" fill="#fff" stroke="#FF9800" stroke-width="2" rx="8"/>
+  <text x="1015" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="#E65100">🧠 Embedding Generator Agent</text>
+  <text x="1015" y="205" font-size="13" font-weight="bold" text-anchor="middle">Technology: AWS Nova Multimodal</text>
+  
+  <text x="850" y="230" font-size="11" font-weight="bold">Operations:</text>
+  <text x="855" y="248" font-size="10">1. Takes video segment (15s) + audio</text>
+  <text x="855" y="263" font-size="10">2. Converts to base64 encoding</text>
+  <text x="855" y="278" font-size="10">3. Calls Nova API with multimodal input</text>
+  <text x="855" y="293" font-size="10">4. Receives 1024-dimensional vector</text>
+  <text x="855" y="308" font-size="10">5. Caches embedding (avoid re-generation)</text>
+  
+  <text x="1015" y="330" font-size="9" text-anchor="middle" fill="#BF360C" font-weight="bold">
+    Output: [0.123, -0.456, 0.789, ...] × 1024 numbers
+  </text>
+  
+  <!-- Agent 4: Anomaly Detection Agent -->
+  <rect x="1220" y="150" width="310" height="200" fill="#fff" stroke="#F44336" stroke-width="2" rx="8"/>
+  <text x="1375" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="#C62828">⚠️ Anomaly Detector</text>
+  <text x="1375" y="205" font-size="13" font-weight="bold" text-anchor="middle">Technology: Pattern Analysis</text>
+  
+  <text x="1230" y="230" font-size="11" font-weight="bold">Detects:</text>
+  <text x="1235" y="248" font-size="10">1. Loitering (person >15 min)</text>
+  <text x="1235" y="263" font-size="10">2. Crowd formation (>10 people)</text>
+  <text x="1235" y="278" font-size="10">3. Object abandonment</text>
+  <text x="1235" y="293" font-size="10">4. After-hours access</text>
+  <text x="1235" y="308" font-size="10">5. Unusual movement patterns</text>
+  
+  <text x="1375" y="330" font-size="9" text-anchor="middle" fill="#B71C1C" font-weight="bold">
+    Output: Alerts with confidence scores
+  </text>
+  
+  <!-- JOURNEY 1: VIDEO UPLOAD -->
+  <rect x="50" y="420" width="1500" height="760" fill="#E3F2FD" stroke="#2196F3" stroke-width="3" rx="10"/>
+  <text x="800" y="455" font-size="24" font-weight="bold" text-anchor="middle" fill="#1565C0">
+    JOURNEY 1: User Uploads Video
+  </text>
+  <text x="800" y="480" font-size="14" text-anchor="middle" fill="#0D47A1">
+    Example: Security Guard uploads "parking_lot_feb9_2pm.mp4" (2 minutes, 120 seconds)
+  </text>
+  
+  <!-- Step 1 -->
+  <rect x="100" y="510" width="680" height="140" fill="#fff" stroke="#2196F3" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="540" r="22" fill="#2196F3"/>
+  <text x="130" y="547" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">1</text>
+  <text x="165" y="545" font-size="15" font-weight="bold">User Action: Upload Video</text>
+  
+  <rect x="120" y="560" width="640" height="70" fill="#f8f9fa" stroke="#2196F3" stroke-width="1" rx="5"/>
+  <text x="130" y="580" font-size="11" font-weight="bold">Input:</text>
+  <text x="135" y="595" font-size="10">• File: parking_lot_feb9_2pm.mp4 (250 MB)</text>
+  <text x="135" y="608" font-size="10">• Metadata: Camera ID = "CAM-PARKING-01", Location = "North Lot"</text>
+  <text x="135" y="621" font-size="10">• User: security-guard@company.com</text>
+  
+  <!-- Step 2 -->
+  <rect x="820" y="510" width="680" height="140" fill="#fff" stroke="#4CAF50" stroke-width="2" rx="8"/>
+  <circle cx="850" cy="540" r="22" fill="#4CAF50"/>
+  <text x="850" y="547" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
+  <text x="885" y="545" font-size="15" font-weight="bold">System: Store & Queue Processing</text>
+  
+  <rect x="840" y="560" width="640" height="70" fill="#f8f9fa" stroke="#4CAF50" stroke-width="1" rx="5"/>
+  <text x="850" y="580" font-size="11" font-weight="bold">Operations:</text>
+  <text x="855" y="595" font-size="10">1. Upload to S3: s3://chronotrace/raw-videos/uuid-abc123.mp4</text>
+  <text x="855" y="608" font-size="10">2. Create DB record: Video ID = abc-123, Status = "processing"</text>
+  <text x="855" y="621" font-size="10">3. Queue Celery task: process_video(video_id="abc-123")</text>
+  
+  <!-- Step 3 -->
+  <rect x="100" y="680" width="680" height="220" fill="#fff" stroke="#4CAF50" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="710" r="22" fill="#4CAF50"/>
+  <text x="130" y="717" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
+  <text x="165" y="715" font-size="15" font-weight="bold">Video Processing Agent Works</text>
+  
+  <rect x="120" y="730" width="640" height="155" fill="#f8f9fa" stroke="#4CAF50" stroke-width="1" rx="5"/>
+  <text x="130" y="750" font-size="11" font-weight="bold">Processing Pipeline (takes ~3 minutes):</text>
+  
+  <text x="135" y="768" font-size="10" font-weight="bold">3.1 FFmpeg Analysis:</text>
+  <text x="145" y="782" font-size="9">→ Duration: 120 seconds, Resolution: 1920x1080, FPS: 30, Codec: H.264</text>
+  
+  <text x="135" y="800" font-size="10" font-weight="bold">3.2 Video Segmentation:</text>
+  <text x="145" y="814" font-size="9">→ 120 seconds ÷ 15 seconds = 8 segments</text>
+  <text x="145" y="826" font-size="9">→ Creates: segment_000.mp4 (0-15s), segment_001.mp4 (15-30s), ... segment_007.mp4 (105-120s)</text>
+  
+  <text x="135" y="844" font-size="10" font-weight="bold">3.3 Thumbnail Generation:</text>
+  <text x="145" y="858" font-size="9">→ Extract frame at 3s mark from each segment → 8 thumbnails (320x180 JPEG)</text>
+  
+  <text x="135" y="876" font-size="10" font-weight="bold">3.4 Audio Extraction:</text>
+  <text x="145" y="890" font-size="9">→ Separate audio track → parking_lot_audio.aac (for noise detection)</text>
+  
+  <!-- Step 4 -->
+  <rect x="820" y="680" width="680" height="220" fill="#fff" stroke="#9C27B0" stroke-width="2" rx="8"/>
+  <circle cx="850" cy="710" r="22" fill="#9C27B0"/>
+  <text x="850" y="717" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
+  <text x="885" y="715" font-size="15" font-weight="bold">Privacy Guardian Agent Works</text>
+  
+  <rect x="840" y="730" width="640" height="155" fill="#f8f9fa" stroke="#9C27B0" stroke-width="1" rx="5"/>
+  <text x="850" y="750" font-size="11" font-weight="bold">Privacy Processing (parallel with embedding):</text>
+  
+  <text x="855" y="768" font-size="10" font-weight="bold">4.1 Face Detection (MediaPipe):</text>
+  <text x="865" y="782" font-size="9">→ Segment 0: 2 faces detected at (x:450, y:200) and (x:800, y:350)</text>
+  <text x="865" y="794" font-size="9">→ Segment 1: 1 face detected at (x:600, y:180)</text>
+  <text x="865" y="806" font-size="9">→ Segments 2-7: 0-3 faces each</text>
+  
+  <text x="855" y="824" font-size="10" font-weight="bold">4.2 Apply Blur:</text>
+  <text x="865" y="838" font-size="9">→ Gaussian blur (99×99 kernel) applied to all detected face regions</text>
+  <text x="865" y="850" font-size="9">→ Creates: segment_000_blurred.mp4, segment_001_blurred.mp4, ...</text>
+  
+  <text x="855" y="868" font-size="10" font-weight="bold">4.3 Metadata Update:</text>
+  <text x="865" y="882" font-size="9">→ Database: has_faces=true, face_count=2, privacy_applied=true</text>
+  
+  <!-- Step 5 -->
+  <rect x="100" y="930" width="680" height="220" fill="#fff" stroke="#FF9800" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="960" r="22" fill="#FF9800"/>
+  <text x="130" y="967" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
+  <text x="165" y="965" font-size="15" font-weight="bold">Embedding Generator Agent Works</text>
+  
+  <rect x="120" y="980" width="640" height="155" fill="#f8f9fa" stroke="#FF9800" stroke-width="1" rx="5"/>
+  <text x="130" y="1000" font-size="11" font-weight="bold">For EACH of 8 segments (parallel processing):</text>
+  
+  <text x="135" y="1018" font-size="10" font-weight="bold">5.1 Check Cache:</text>
+  <text x="145" y="1032" font-size="9">→ Redis lookup: embedding:hash(segment_000.mp4) → MISS (first time)</text>
+  
+  <text x="135" y="1050" font-size="10" font-weight="bold">5.2 Prepare Data:</text>
+  <text x="145" y="1064" font-size="9">→ Read segment_000_blurred.mp4 (privacy-safe version)</text>
+  <text x="145" y="1076" font-size="9">→ Convert to base64: "iVBORw0KGgoAAAANS..." (compressed)</text>
+  
+  <text x="135" y="1094" font-size="10" font-weight="bold">5.3 Call AWS Nova API:</text>
+  <text x="145" y="1108" font-size="9">→ POST https://bedrock.amazonaws.com/v1/models/nova-embed-multimodal</text>
+  <text x="145" y="1120" font-size="9">→ Receives: [0.234, -0.567, 0.123, ...] × 1024 dimensions | Cost: $0.001</text>
+  
+  <!-- Step 6 -->
+  <rect x="820" y="930" width="680" height="220" fill="#fff" stroke="#03A9F4" stroke-width="2" rx="8"/>
+  <circle cx="850" cy="960" r="22" fill="#03A9F4"/>
+  <text x="850" y="967" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">6</text>
+  <text x="885" y="965" font-size="15" font-weight="bold">Store Embeddings & Finalize</text>
+  
+  <rect x="840" y="980" width="640" height="155" fill="#f8f9fa" stroke="#03A9F4" stroke-width="1" rx="5"/>
+  <text x="850" y="1000" font-size="11" font-weight="bold">Storage & Indexing:</text>
+  
+  <text x="855" y="1018" font-size="10" font-weight="bold">6.1 Store in Qdrant (Vector DB):</text>
+  <text x="865" y="1032" font-size="9">→ Point ID: "qdrant-vec-001", Vector: [1024 floats], Payload: {segment_id, camera_id, ...}</text>
+  <text x="865" y="1044" font-size="9">→ Indexed for fast cosine similarity search</text>
+  
+  <text x="855" y="1062" font-size="10" font-weight="bold">6.2 Cache Embedding:</text>
+  <text x="865" y="1076" font-size="9">→ Redis: SET embedding:hash(segment_000) → [1024 floats] | TTL: 7 days</text>
+  
+  <text x="855" y="1094" font-size="10" font-weight="bold">6.3 Update PostgreSQL:</text>
+  <text x="865" y="1108" font-size="9">→ UPDATE video_segments SET embedding_id='qdrant-vec-001', status='completed'</text>
+  <text x="865" y="1120" font-size="9">→ UPDATE videos SET processing_status='completed' (when all 8 segments done)</text>
+  
+  <!-- Final Result -->
+  <rect x="100" y="1165" width="1400" height="50" fill="#C8E6C9" stroke="#4CAF50" stroke-width="3" rx="8"/>
+  <text x="800" y="1195" font-size="14" font-weight="bold" text-anchor="middle" fill="#1B5E20">
+    ✅ RESULT: Video fully processed! 8 searchable segments with privacy protection | Total time: ~3 minutes | Cost: $0.008
+  </text>
+  
+  <!-- JOURNEY 2: SEARCH QUERY -->
+  <rect x="50" y="1260" width="1500" height="1220" fill="#FFF3E0" stroke="#FF9800" stroke-width="3" rx="10"/>
+  <text x="800" y="1295" font-size="24" font-weight="bold" text-anchor="middle" fill="#E65100">
+    JOURNEY 2: User Searches Videos
+  </text>
+  <text x="800" y="1320" font-size="14" text-anchor="middle" fill="#BF360C">
+    Example: Detective searches "person in red jacket carrying backpack" at 3:00 PM
+  </text>
+  
+  <!-- Search Step 1 -->
+  <rect x="100" y="1350" width="1400" height="120" fill="#fff" stroke="#FF9800" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="1380" r="22" fill="#FF9800"/>
+  <text x="130" y="1387" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">1</text>
+  <text x="165" y="1385" font-size="15" font-weight="bold">User Enters Search Query</text>
+  
+  <rect x="120" y="1400" width="1360" height="55" fill="#f8f9fa" stroke="#FF9800" stroke-width="1" rx="5"/>
+  <text x="130" y="1420" font-size="11" font-weight="bold">User Input:</text>
+  <text x="135" y="1435" font-size="10">Query: "person in red jacket carrying backpack"</text>
+  <text x="135" y="1448" font-size="10">Filters: Camera = "CAM-PARKING-01", Time Range = "Feb 9, 2:00 PM - 4:00 PM", Min Confidence = 70%</text>
+  
+  <!-- Search Step 2 -->
+  <rect x="100" y="1495" width="680" height="150" fill="#fff" stroke="#FF9800" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="1525" r="22" fill="#FF9800"/>
+  <text x="130" y="1532" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
+  <text x="165" y="1530" font-size="15" font-weight="bold">Check Cache (Redis)</text>
+  
+  <rect x="120" y="1545" width="640" height="85" fill="#f8f9fa" stroke="#FF9800" stroke-width="1" rx="5"/>
+  <text x="130" y="1565" font-size="11" font-weight="bold">Cache Lookup:</text>
+  
+  <text x="135" y="1583" font-size="10" font-weight="bold">2.1 Generate Cache Key:</text>
+  <text x="145" y="1597" font-size="9">→ hash("person in red jacket carrying backpack" + filters) = "cache_a7f3b2"</text>
+  
+  <text x="135" y="1615" font-size="10" font-weight="bold">2.2 Check Redis:</text>
+  <text x="145" y="1629" font-size="9">→ GET search_results:cache_a7f3b2 → MISS (never searched before)</text>
+  
+  <!-- Search Step 3 -->
+  <rect x="820" y="1495" width="680" height="150" fill="#fff" stroke="#FF9800" stroke-width="2" rx="8"/>
+  <circle cx="850" cy="1525" r="22" fill="#FF9800"/>
+  <text x="850" y="1532" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
+  <text x="885" y="1530" font-size="15" font-weight="bold">Generate Query Embedding</text>
+  
+  <rect x="840" y="1545" width="640" height="85" fill="#f8f9fa" stroke="#FF9800" stroke-width="1" rx="5"/>
+  <text x="850" y="1565" font-size="11" font-weight="bold">Embedding Generation Agent:</text>
+  
+  <text x="855" y="1583" font-size="10" font-weight="bold">3.1 Call AWS Nova (Text Embedding):</text>
+  <text x="865" y="1597" font-size="9">→ Input: "person in red jacket carrying backpack" (text only, no video)</text>
+  <text x="865" y="1609" font-size="9">→ Output: [0.345, -0.123, 0.678, ...] × 1024 dimensions | Time: 50ms | Cost: $0.0001</text>
+  
+  <!-- Search Step 4 -->
+  <rect x="100" y="1670" width="1400" height="200" fill="#fff" stroke="#03A9F4" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="1700" r="22" fill="#03A9F4"/>
+  <text x="130" y="1707" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
+  <text x="165" y="1705" font-size="15" font-weight="bold">Search Qdrant Vector Database</text>
+  
+  <rect x="120" y="1720" width="1360" height="135" fill="#f8f9fa" stroke="#03A9F4" stroke-width="1" rx="5"/>
+  <text x="130" y="1740" font-size="11" font-weight="bold">Vector Similarity Search:</text>
+  
+  <text x="135" y="1758" font-size="10" font-weight="bold">4.1 Query Qdrant:</text>
+  <text x="145" y="1772" font-size="9">→ Search for vectors similar to query_vector using cosine similarity</text>
+  <text x="145" y="1784" font-size="9">→ Filters: camera_id = "CAM-PARKING-01" AND timestamp BETWEEN "2:00 PM" AND "4:00 PM"</text>
+  <text x="145" y="1796" font-size="9">→ Top K: 20 results, Score threshold: 0.70</text>
+  
+  <text x="135" y="1814" font-size="10" font-weight="bold">4.2 Qdrant Returns Matches (45ms):</text>
+  <text x="145" y="1828" font-size="9">Result 1: segment_id="seg-003", score=0.87 (87% match)</text>
+  <text x="145" y="1840" font-size="9">Result 2: segment_id="seg-015", score=0.82 (82% match)</text>
+  <text x="145" y="1852" font-size="9">...8 total results above 70% threshold</text>
+  
+  <!-- Search Step 5 -->
+  <rect x="100" y="1895" width="1400" height="180" fill="#fff" stroke="#9C27B0" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="1925" r="22" fill="#9C27B0"/>
+  <text x="130" y="1932" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
+  <text x="165" y="1930" font-size="15" font-weight="bold">Enrich Results from PostgreSQL</text>
+  
+  <rect x="120" y="1945" width="1360" height="115" fill="#f8f9fa" stroke="#9C27B0" stroke-width="1" rx="5"/>
+  <text x="130" y="1965" font-size="11" font-weight="bold">Database Join (25ms):</text>
+  
+  <text x="135" y="1983" font-size="10" font-weight="bold">5.1 Fetch Full Metadata:</text>
+  <text x="145" y="1997" font-size="9">→ SELECT * FROM video_segments WHERE id IN ('seg-003', 'seg-015', ...)</text>
+  <text x="145" y="2009" font-size="9">→ JOIN videos ON video_segments.video_id = videos.id</text>
+  
+  <text x="135" y="2027" font-size="10" font-weight="bold">5.2 Combine Data:</text>
+  <text x="145" y="2041" font-size="9">Result 1: {score: 0.87, video: "parking_lot_feb9_2pm.mp4", timestamp: "2:35 PM", thumbnail: "thumb_003.jpg", has_faces: true}</text>
+  <text x="145" y="2053" font-size="9">Result 2: {score: 0.82, video: "parking_lot_feb9_3pm.mp4", timestamp: "3:12 PM", thumbnail: "thumb_015.jpg", has_faces: false}</text>
+  
+  <!-- Search Step 6 -->
+  <rect x="100" y="2100" width="680" height="140" fill="#fff" stroke="#4CAF50" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="2130" r="22" fill="#4CAF50"/>
+  <text x="130" y="2137" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">6</text>
+  <text x="165" y="2135" font-size="15" font-weight="bold">Cache Results</text>
+  
+  <rect x="120" y="2150" width="640" height="75" fill="#f8f9fa" stroke="#4CAF50" stroke-width="1" rx="5"/>
+  <text x="130" y="2170" font-size="11" font-weight="bold">Store for Future Use:</text>
+  
+  <text x="135" y="2188" font-size="10">→ Redis: SET search_results:cache_a7f3b2 → JSON(8 results)</text>
+  <text x="135" y="2201" font-size="10">→ TTL: 1 hour (subsequent searches instant)</text>
+  <text x="135" y="2214" font-size="10">→ Future query time: 15ms instead of 120ms</text>
+  
+  <!-- Search Step 7 -->
+  <rect x="820" y="2100" width="680" height="140" fill="#fff" stroke="#2196F3" stroke-width="2" rx="8"/>
+  <circle cx="850" cy="2130" r="22" fill="#2196F3"/>
+  <text x="850" y="2137" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">7</text>
+  <text x="885" y="2135" font-size="15" font-weight="bold">Return Results to User</text>
+  
+  <rect x="840" y="2150" width="640" height="75" fill="#f8f9fa" stroke="#2196F3" stroke-width="1" rx="5"/>
+  <text x="850" y="2170" font-size="11" font-weight="bold">Display to Detective:</text>
+  
+  <text x="855" y="2188" font-size="10">→ Show 8 video thumbnails in grid</text>
+  <text x="855" y="2201" font-size="10">→ Each with: confidence score, timestamp, camera location</text>
+  <text x="855" y="2214" font-size="10">→ Click thumbnail → plays video from that exact moment</text>
+  
+  <!-- Search Analytics -->
+  <rect x="100" y="2265" width="1400" height="90" fill="#fff" stroke="#FF9800" stroke-width="2" rx="8"/>
+  <circle cx="130" cy="2295" r="22" fill="#FF9800"/>
+  <text x="130" y="2302" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">8</text>
+  <text x="165" y="2300" font-size="15" font-weight="bold">Log Search Analytics</text>
+  
+  <rect x="120" y="2315" width="1360" height="30" fill="#f8f9fa" stroke="#FF9800" stroke-width="1" rx="5"/>
+  <text x="130" y="2335" font-size="10">
+    → PostgreSQL: INSERT INTO searches (user_id, query_text, result_count=8, execution_time_ms=120, nova_time=50ms, qdrant_time=45ms, db_time=25ms)
+  </text>
+  
+  <!-- Search Final Result -->
+  <rect x="100" y="2370" width="1400" height="90" fill="#C8E6C9" stroke="#4CAF50" stroke-width="3" rx="8"/>
+  <text x="800" y="2395" font-size="14" font-weight="bold" text-anchor="middle" fill="#1B5E20">
+    ✅ SEARCH COMPLETE!
+  </text>
+  <text x="800" y="2418" font-size="12" text-anchor="middle" fill="#2E7D32">
+    Found 8 relevant segments | Total time: 120ms (0.12 seconds) | Cost: $0.0001
+  </text>
+  <text x="800" y="2438" font-size="11" text-anchor="middle" fill="#2E7D32">
+    Detective can now review matches, click to play videos, and export clips for evidence
+  </text>
+  
+  <!-- Bonus: Anomaly Example -->
+  <rect x="50" y="2520" width="1500" height="220" fill="#FFEBEE" stroke="#F44336" stroke-width="3" rx="10"/>
+  <text x="800" y="2555" font-size="22" font-weight="bold" text-anchor="middle" fill="#C62828">
+    BONUS: Anomaly Detection in Action
+  </text>
+  
+  <text x="70" y="2590" font-size="13" font-weight="bold">While processing the parking lot video, Anomaly Detector Agent found:</text>
+  
+  <rect x="100" y="2605" width="680" height="110" fill="#fff" stroke="#F44336" stroke-width="2" rx="8"/>
+  <text x="120" y="2630" font-size="12" font-weight="bold" fill="#D32F2F">⚠️ Loitering Alert (Confidence: 89%)</text>
+  <text x="130" y="2650" font-size="10">• Segment: 003 (timestamp: 2:35 PM - 2:50 PM)</text>
+  <text x="130" y="2665" font-size="10">• Person detected in same 5m radius for 22 minutes</text>
+  <text x="130" y="2680" font-size="10">• Action: Alert sent to security team</text>
+  <text x="130" y="2695" font-size="10">• Status: Under investigation</text>
+  
+  <rect x="820" y="2605" width="680" height="110" fill="#fff" stroke="#F44336" stroke-width="2" rx="8"/>
+  <text x="840" y="2630" font-size="12" font-weight="bold" fill="#D32F2F">⚠️ After-Hours Access (Confidence: 100%)</text>
+  <text x="850" y="2650" font-size="10">• Segment: 007 (timestamp: 11:45 PM)</text>
+  <text x="850" y="2665" font-size="10">• Vehicle entered parking lot during closed hours (10 PM - 6 AM)</text>
+  <text x="850" y="2680" font-size="10">• Action: Automatic incident report generated</text>
+  <text x="850" y="2695" font-size="10">• Status: Resolved (employee overtime approved)</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2196F3"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#4CAF50"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#FF9800"/>
+    </marker>
+  </defs>
+  
+  <!-- Journey 1 Flow Arrows -->
+  <path d="M 440 650 L 440 680" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <path d="M 1160 650 L 1160 680" stroke="#9C27B0" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <path d="M 440 900 L 440 930" stroke="#FF9800" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <path d="M 1160 900 L 1160 930" stroke="#03A9F4" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  
+  <!-- Journey 2 Flow Arrows -->
+  <path d="M 800 1470 L 800 1495" stroke="#FF9800" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <path d="M 800 1645 L 800 1670" stroke="#03A9F4" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <path d="M 800 1870 L 800 1895" stroke="#9C27B0" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <path d="M 800 2075 L 800 2100" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <path d="M 800 2240 L 800 2265" stroke="#FF9800" stroke-width="3" marker-end="url(#arrow-orange)"/>
+</svg>
