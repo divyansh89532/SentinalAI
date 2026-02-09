@@ -1,0 +1,213 @@
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="700" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#232F3E">
+    ChronoTrace - Local-First Architecture (Hackathon Build)
+  </text>
+  
+  <!-- Legend -->
+  <rect x="20" y="50" width="200" height="80" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="120" y="70" font-size="12" font-weight="bold" text-anchor="middle">LOCAL ENVIRONMENT</text>
+  <text x="120" y="90" font-size="10" text-anchor="middle">(Primary - $0 cost)</text>
+  <text x="120" y="110" font-size="10" text-anchor="middle">Runs on your machine</text>
+  
+  <rect x="240" y="50" width="200" height="80" fill="#FFF3E0" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="340" y="70" font-size="12" font-weight="bold" text-anchor="middle">AWS SERVICES</text>
+  <text x="340" y="90" font-size="10" text-anchor="middle">(Minimal - $100 budget)</text>
+  <text x="340" y="110" font-size="10" text-anchor="middle">Pay-per-use only</text>
+  
+  <!-- Local Environment Box -->
+  <rect x="50" y="160" width="650" height="780" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3" rx="10"/>
+  <text x="375" y="190" font-size="18" font-weight="bold" text-anchor="middle">🖥️ LOCAL MACHINE</text>
+  
+  <!-- Frontend Layer -->
+  <rect x="80" y="210" width="590" height="140" fill="#FFFFFF" stroke="#2196F3" stroke-width="2" rx="5"/>
+  <text x="375" y="235" font-size="14" font-weight="bold" text-anchor="middle">FRONTEND LAYER</text>
+  
+  <rect x="100" y="250" width="250" height="80" fill="#61DAFB" stroke="#2196F3" stroke-width="2" rx="5"/>
+  <text x="225" y="275" font-size="12" font-weight="bold" text-anchor="middle">⚛️ React Application</text>
+  <text x="225" y="295" font-size="10" text-anchor="middle">• Video player with timeline</text>
+  <text x="225" y="310" font-size="10" text-anchor="middle">• Natural language search UI</text>
+  <text x="225" y="325" font-size="10" text-anchor="middle">• Results visualization</text>
+  
+  <rect x="380" y="250" width="270" height="80" fill="#E3F2FD" stroke="#2196F3" stroke-width="2" rx="5"/>
+  <text x="515" y="275" font-size="12" font-weight="bold" text-anchor="middle">🎤 Voice Interface (Optional)</text>
+  <text x="515" y="295" font-size="10" text-anchor="middle">• Speech-to-text input</text>
+  <text x="515" y="310" font-size="10" text-anchor="middle">• Connects to AWS Nova Sonic</text>
+  <text x="515" y="325" font-size="10" text-anchor="middle" fill="#FF5722">⚠️ Skip for demo to save $</text>
+  
+  <!-- Backend Layer -->
+  <rect x="80" y="370" width="590" height="180" fill="#FFFFFF" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="375" y="395" font-size="14" font-weight="bold" text-anchor="middle">BACKEND LAYER</text>
+  
+  <rect x="100" y="410" width="250" height="120" fill="#5DBF72" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="225" y="435" font-size="12" font-weight="bold" text-anchor="middle">⚡ FastAPI Server</text>
+  <text x="225" y="455" font-size="10" text-anchor="middle">• REST API endpoints</text>
+  <text x="225" y="470" font-size="10" text-anchor="middle">• WebSocket (real-time updates)</text>
+  <text x="225" y="485" font-size="10" text-anchor="middle">• Video upload handling</text>
+  <text x="225" y="500" font-size="10" text-anchor="middle">• Search query processing</text>
+  <text x="225" y="515" font-size="10" text-anchor="middle">Port: 8000</text>
+  
+  <rect x="380" y="410" width="270" height="120" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="515" y="435" font-size="12" font-weight="bold" text-anchor="middle">🤖 LangGraph Agent</text>
+  <text x="515" y="455" font-size="10" text-anchor="middle">• Multi-step reasoning</text>
+  <text x="515" y="470" font-size="10" text-anchor="middle">• Chain-of-thought queries</text>
+  <text x="515" y="485" font-size="10" text-anchor="middle">• Report generation</text>
+  <text x="515" y="500" font-size="10" text-anchor="middle">• Timeline reconstruction</text>
+  <text x="515" y="515" font-size="10" text-anchor="middle">Uses: AWS Nova 2 Lite</text>
+  
+  <!-- Processing Layer -->
+  <rect x="80" y="570" width="590" height="160" fill="#FFFFFF" stroke="#9C27B0" stroke-width="2" rx="5"/>
+  <text x="375" y="595" font-size="14" font-weight="bold" text-anchor="middle">PROCESSING LAYER</text>
+  
+  <rect x="100" y="610" width="180" height="100" fill="#CE93D8" stroke="#9C27B0" stroke-width="2" rx="5"/>
+  <text x="190" y="635" font-size="12" font-weight="bold" text-anchor="middle">🎬 Video Processor</text>
+  <text x="190" y="655" font-size="10" text-anchor="middle">• FFmpeg segmentation</text>
+  <text x="190" y="670" font-size="10" text-anchor="middle">• Frame extraction</text>
+  <text x="190" y="685" font-size="10" text-anchor="middle">• Audio separation</text>
+  <text x="190" y="700" font-size="10" text-anchor="middle">opencv-python</text>
+  
+  <rect x="300" y="610" width="180" height="100" fill="#E1BEE7" stroke="#9C27B0" stroke-width="2" rx="5"/>
+  <text x="390" y="635" font-size="12" font-weight="bold" text-anchor="middle">🔢 Embedding Engine</text>
+  <text x="390" y="655" font-size="10" text-anchor="middle">• Calls Nova API</text>
+  <text x="390" y="670" font-size="10" text-anchor="middle">• 1024-dim vectors</text>
+  <text x="390" y="685" font-size="10" text-anchor="middle">• Batch processing</text>
+  <text x="390" y="700" font-size="10" text-anchor="middle">multimodal embeddings</text>
+  
+  <rect x="500" y="610" width="150" height="100" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2" rx="5"/>
+  <text x="575" y="635" font-size="12" font-weight="bold" text-anchor="middle">🔒 Privacy Filter</text>
+  <text x="575" y="655" font-size="10" text-anchor="middle">• Face detection</text>
+  <text x="575" y="670" font-size="10" text-anchor="middle">• Auto-blur</text>
+  <text x="575" y="685" font-size="10" text-anchor="middle">• Plate masking</text>
+  <text x="575" y="700" font-size="10" text-anchor="middle">mediapipe/blur</text>
+  
+  <!-- Data Layer -->
+  <rect x="80" y="750" width="590" height="160" fill="#FFFFFF" stroke="#FF5722" stroke-width="2" rx="5"/>
+  <text x="375" y="775" font-size="14" font-weight="bold" text-anchor="middle">DATA LAYER</text>
+  
+  <rect x="100" y="790" width="200" height="100" fill="#FF8A65" stroke="#FF5722" stroke-width="2" rx="5"/>
+  <text x="200" y="815" font-size="12" font-weight="bold" text-anchor="middle">🗄️ Qdrant Vector DB</text>
+  <text x="200" y="835" font-size="10" text-anchor="middle">• Docker container</text>
+  <text x="200" y="850" font-size="10" text-anchor="middle">• 1024-dim index</text>
+  <text x="200" y="865" font-size="10" text-anchor="middle">• Cosine similarity</text>
+  <text x="200" y="880" font-size="10" text-anchor="middle">Port: 6333</text>
+  
+  <rect x="320" y="790" width="160" height="100" fill="#FFCCBC" stroke="#FF5722" stroke-width="2" rx="5"/>
+  <text x="400" y="815" font-size="12" font-weight="bold" text-anchor="middle">💾 SQLite DB</text>
+  <text x="400" y="835" font-size="10" text-anchor="middle">• Video metadata</text>
+  <text x="400" y="850" font-size="10" text-anchor="middle">• Search history</text>
+  <text x="400" y="865" font-size="10" text-anchor="middle">• User sessions</text>
+  <text x="400" y="880" font-size="10" text-anchor="middle">chronotrace.db</text>
+  
+  <rect x="500" y="790" width="150" height="100" fill="#FBE9E7" stroke="#FF5722" stroke-width="2" rx="5"/>
+  <text x="575" y="815" font-size="12" font-weight="bold" text-anchor="middle">📁 File Storage</text>
+  <text x="575" y="835" font-size="10" text-anchor="middle">• Raw videos</text>
+  <text x="575" y="850" font-size="10" text-anchor="middle">• Processed clips</text>
+  <text x="575" y="865" font-size="10" text-anchor="middle">• Thumbnails</text>
+  <text x="575" y="880" font-size="10" text-anchor="middle">./data/videos/</text>
+  
+  <!-- AWS Cloud Box -->
+  <rect x="750" y="160" width="600" height="400" fill="#FFF3E0" stroke="#FF9800" stroke-width="3" rx="10"/>
+  <text x="1050" y="190" font-size="18" font-weight="bold" text-anchor="middle">☁️ AWS CLOUD (Minimal Usage)</text>
+  
+  <!-- Nova Services -->
+  <rect x="780" y="220" width="560" height="140" fill="#FFFFFF" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="1060" y="245" font-size="14" font-weight="bold" text-anchor="middle">🧠 AMAZON NOVA APIs</text>
+  
+  <rect x="800" y="260" width="240" height="80" fill="#FFE0B2" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="920" y="285" font-size="12" font-weight="bold" text-anchor="middle">Nova Multimodal Embeddings</text>
+  <text x="920" y="305" font-size="10" text-anchor="middle">• Video → 1024-dim vectors</text>
+  <text x="920" y="320" font-size="10" text-anchor="middle">• Audio + visual fusion</text>
+  <text x="920" y="335" font-size="10" fill="#D84315">💰 ~$0.10/1000 segments</text>
+  
+  <rect x="1060" y="260" width="260" height="80" fill="#FFE0B2" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="1190" y="285" font-size="12" font-weight="bold" text-anchor="middle">Nova 2 Lite (LLM)</text>
+  <text x="1190" y="305" font-size="10" text-anchor="middle">• Query understanding</text>
+  <text x="1190" y="320" font-size="10" text-anchor="middle">• Report generation</text>
+  <text x="1190" y="335" font-size="10" fill="#D84315">💰 ~$0.30/million tokens</text>
+  
+  <!-- Optional AWS Service -->
+  <rect x="780" y="380" width="560" height="100" fill="#FFFFFF" stroke="#FF9800" stroke-width="2" stroke-dasharray="5,5" rx="5"/>
+  <text x="1060" y="405" font-size="14" font-weight="bold" text-anchor="middle">🎤 OPTIONAL (Skip for MVP)</text>
+  
+  <rect x="800" y="420" width="240" height="45" fill="#FFF8E1" stroke="#FF9800" stroke-width="1" rx="5"/>
+  <text x="920" y="440" font-size="11" text-anchor="middle">Nova 2 Sonic (Speech)</text>
+  <text x="920" y="455" font-size="9" text-anchor="middle" fill="#D84315">💰 Save for later</text>
+  
+  <rect x="1060" y="420" width="260" height="45" fill="#FFF8E1" stroke="#FF9800" stroke-width="1" rx="5"/>
+  <text x="1190" y="440" font-size="11" text-anchor="middle">S3 (Video Storage)</text>
+  <text x="1190" y="455" font-size="9" text-anchor="middle" fill="#D84315">💰 Use local storage instead</text>
+  
+  <!-- Demo Assets -->
+  <rect x="750" y="590" width="600" height="140" fill="#E3F2FD" stroke="#2196F3" stroke-width="2" rx="5"/>
+  <text x="1050" y="615" font-size="14" font-weight="bold" text-anchor="middle">📦 DEMO ASSETS</text>
+  
+  <rect x="780" y="635" width="250" height="70" fill="#BBDEFB" stroke="#2196F3" stroke-width="2" rx="5"/>
+  <text x="905" y="660" font-size="12" font-weight="bold" text-anchor="middle">Sample Video Dataset</text>
+  <text x="905" y="680" font-size="10" text-anchor="middle">• 20-30 short clips (5-30s each)</text>
+  <text x="905" y="695" font-size="10" text-anchor="middle">• Pre-embedded for demo speed</text>
+  
+  <rect x="1060" y="635" width="270" height="70" fill="#BBDEFB" stroke="#2196F3" stroke-width="2" rx="5"/>
+  <text x="1195" y="660" font-size="12" font-weight="bold" text-anchor="middle">Pre-scripted Scenarios</text>
+  <text x="1195" y="680" font-size="10" text-anchor="middle">• 3 demo queries ready to run</text>
+  <text x="1195" y="695" font-size="10" text-anchor="middle">• Instant results for presentation</text>
+  
+  <!-- Data Flow Arrows -->
+  <!-- Frontend to Backend -->
+  <path d="M 225 350 L 225 410" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="240" y="385" font-size="10" fill="#333">Search Query</text>
+  
+  <!-- Backend to LangGraph -->
+  <path d="M 350 470 L 380 470" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Backend to Video Processor -->
+  <path d="M 225 530 L 190 610" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="185" y="575" font-size="10" fill="#333">Video Upload</text>
+  
+  <!-- Video Processor to Embedding -->
+  <path d="M 280 660 L 300 660" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Embedding to Qdrant -->
+  <path d="M 390 710 L 300 790" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="330" y="755" font-size="10" fill="#333">Store Vectors</text>
+  
+  <!-- Backend to Qdrant (search) -->
+  <path d="M 200 530 L 200 790" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="210" y="665" font-size="10" fill="#333">Vector Search</text>
+  
+  <!-- Embedding to AWS Nova -->
+  <path d="M 480 660 L 800 280" stroke="#FF9800" stroke-width="3" fill="none" marker-end="url(#arrowhead-orange)" stroke-dasharray="5,5"/>
+  <text x="630" y="450" font-size="11" fill="#FF9800" font-weight="bold">API Call</text>
+  
+  <!-- LangGraph to AWS Nova -->
+  <path d="M 650 470 L 800 300" stroke="#FF9800" stroke-width="3" fill="none" marker-end="url(#arrowhead-orange)" stroke-dasharray="5,5"/>
+  <text x="720" y="370" font-size="11" fill="#FF9800" font-weight="bold">LLM API</text>
+  
+  <!-- Cost Banner -->
+  <rect x="750" y="760" width="600" height="160" fill="#C8E6C9" stroke="#4CAF50" stroke-width="3" rx="10"/>
+  <text x="1050" y="790" font-size="16" font-weight="bold" text-anchor="middle" fill="#1B5E20">💰 COST OPTIMIZATION STRATEGY</text>
+  
+  <text x="780" y="820" font-size="12" font-weight="bold" fill="#2E7D32">Local Development (Free):</text>
+  <text x="780" y="840" font-size="10">✓ React + FastAPI + Qdrant + SQLite run on your laptop</text>
+  <text x="780" y="855" font-size="10">✓ Process 20-30 sample videos locally</text>
+  <text x="780" y="870" font-size="10">✓ Use cached embeddings for demo (generate once, reuse)</text>
+  
+  <text x="780" y="895" font-size="12" font-weight="bold" fill="#D84315">AWS Usage (~$20-40 for hackathon):</text>
+  <text x="780" y="915" font-size="10">• Embedding API: 100 video segments × $0.001 = ~$0.10</text>
+  <text x="780" y="930" font-size="10">• Nova 2 Lite: 500K tokens × $0.30/M = ~$0.15</text>
+  <text x="780" y="945" font-size="10">• Total estimated: $5-10 for development + $10-20 buffer</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#FF9800"/>
+    </marker>
+  </defs>
+  
+  <!-- Footer Notes -->
+  <text x="700" y="985" font-size="10" text-anchor="middle" fill="#666">
+    🎯 Hackathon Focus: Build locally, minimize AWS calls, pre-generate embeddings for demo
+  </text>
+</svg>

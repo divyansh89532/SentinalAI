@@ -1,0 +1,247 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="800" y="30" font-size="26" font-weight="bold" text-anchor="middle" fill="#232F3E">
+    ChronoTrace - Production Architecture (30-Day Build)
+  </text>
+  <text x="800" y="55" font-size="14" text-anchor="middle" fill="#666">
+    Enterprise-Grade Video Intelligence Platform
+  </text>
+  
+  <!-- Client Layer -->
+  <rect x="50" y="100" width="1500" height="180" fill="#E3F2FD" stroke="#2196F3" stroke-width="3" rx="10"/>
+  <text x="800" y="130" font-size="18" font-weight="bold" text-anchor="middle">CLIENT LAYER</text>
+  
+  <!-- Web App -->
+  <rect x="100" y="150" width="400" height="100" fill="#FFFFFF" stroke="#2196F3" stroke-width="2" rx="5"/>
+  <text x="300" y="180" font-size="14" font-weight="bold" text-anchor="middle">🌐 Web Application</text>
+  <text x="300" y="200" font-size="11" text-anchor="middle">React 18 + TypeScript</text>
+  <text x="300" y="215" font-size="11" text-anchor="middle">shadcn/ui + Tailwind CSS</text>
+  <text x="300" y="230" font-size="11" text-anchor="middle">Vite + TanStack Query</text>
+  <text x="300" y="245" font-size="10" text-anchor="middle" fill="#1976D2">Deployed: Vercel</text>
+  
+  <!-- Mobile App -->
+  <rect x="540" y="150" width="260" height="100" fill="#FFF3E0" stroke="#FF9800" stroke-width="2" stroke-dasharray="5,5" rx="5"/>
+  <text x="670" y="180" font-size="14" font-weight="bold" text-anchor="middle">📱 Mobile App (Future)</text>
+  <text x="670" y="200" font-size="11" text-anchor="middle">React Native</text>
+  <text x="670" y="215" font-size="11" text-anchor="middle">iOS + Android</text>
+  <text x="670" y="230" font-size="10" text-anchor="middle" fill="#E65100">Phase 2</text>
+  
+  <!-- API Consumers -->
+  <rect x="840" y="150" width="400" height="100" fill="#FFFFFF" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="1040" y="180" font-size="14" font-weight="bold" text-anchor="middle">🔌 API Consumers</text>
+  <text x="1040" y="200" font-size="11" text-anchor="middle">VMS Systems (Genetec, Milestone)</text>
+  <text x="1040" y="215" font-size="11" text-anchor="middle">Incident Management (ServiceNow)</text>
+  <text x="1040" y="230" font-size="11" text-anchor="middle">Custom Integrations</text>
+  <text x="1040" y="245" font-size="10" text-anchor="middle" fill="#388E3C">REST API + Webhooks</text>
+  
+  <!-- CDN/Load Balancer -->
+  <rect x="50" y="320" width="1500" height="80" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2" rx="10"/>
+  <text x="800" y="350" font-size="16" font-weight="bold" text-anchor="middle">☁️ CDN + LOAD BALANCER</text>
+  <text x="400" y="375" font-size="12" text-anchor="middle">CloudFront (Static Assets)</text>
+  <text x="800" y="375" font-size="12" text-anchor="middle">nginx (Reverse Proxy + SSL)</text>
+  <text x="1200" y="375" font-size="12" text-anchor="middle">WebSocket Gateway</text>
+  
+  <!-- Application Layer -->
+  <rect x="50" y="440" width="750" height="280" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3" rx="10"/>
+  <text x="425" y="470" font-size="18" font-weight="bold" text-anchor="middle">APPLICATION LAYER</text>
+  
+  <!-- FastAPI -->
+  <rect x="80" y="490" width="330" height="190" fill="#FFFFFF" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="245" y="520" font-size="14" font-weight="bold" text-anchor="middle">⚡ FastAPI Server</text>
+  <text x="245" y="540" font-size="11" text-anchor="middle">• REST API (async)</text>
+  <text x="245" y="555" font-size="11" text-anchor="middle">• WebSocket Server</text>
+  <text x="245" y="570" font-size="11" text-anchor="middle">• Authentication (JWT)</text>
+  <text x="245" y="585" font-size="11" text-anchor="middle">• Rate Limiting</text>
+  <text x="245" y="600" font-size="11" text-anchor="middle">• API Documentation</text>
+  <text x="245" y="615" font-size="11" text-anchor="middle">• Health Checks</text>
+  <text x="245" y="635" font-size="10" text-anchor="middle" fill="#2E7D32">Port: 8000</text>
+  <text x="245" y="655" font-size="10" text-anchor="middle" fill="#2E7D32">Deploy: AWS EC2 (t3.medium)</text>
+  
+  <!-- Celery Workers -->
+  <rect x="440" y="490" width="330" height="190" fill="#FFFFFF" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="605" y="520" font-size="14" font-weight="bold" text-anchor="middle">⚙️ Celery Workers</text>
+  <text x="605" y="540" font-size="11" text-anchor="middle">• Video Processing Queue</text>
+  <text x="605" y="555" font-size="11" text-anchor="middle">• Embedding Generation</text>
+  <text x="605" y="570" font-size="11" text-anchor="middle">• Report Generation</text>
+  <text x="605" y="585" font-size="11" text-anchor="middle">• Anomaly Detection</text>
+  <text x="605" y="600" font-size="11" text-anchor="middle">• Batch Processing</text>
+  <text x="605" y="615" font-size="11" text-anchor="middle">• Real-time Stream</text>
+  <text x="605" y="635" font-size="10" text-anchor="middle" fill="#2E7D32">Workers: 4 concurrent</text>
+  <text x="605" y="655" font-size="10" text-anchor="middle" fill="#2E7D32">Deploy: AWS EC2 (t3.large)</text>
+  
+  <!-- AI/ML Layer -->
+  <rect x="850" y="440" width="700" height="280" fill="#FFF3E0" stroke="#FF9800" stroke-width="3" rx="10"/>
+  <text x="1200" y="470" font-size="18" font-weight="bold" text-anchor="middle">🧠 AI/ML LAYER</text>
+  
+  <!-- LangGraph -->
+  <rect x="880" y="490" width="200" height="110" fill="#FFFFFF" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="980" y="515" font-size="13" font-weight="bold" text-anchor="middle">🔗 LangGraph</text>
+  <text x="980" y="535" font-size="10" text-anchor="middle">Multi-agent System</text>
+  <text x="980" y="550" font-size="10" text-anchor="middle">Chain-of-thought</text>
+  <text x="980" y="565" font-size="10" text-anchor="middle">Report Generation</text>
+  <text x="980" y="580" font-size="10" text-anchor="middle">Query Planning</text>
+  
+  <!-- Nova Models -->
+  <rect x="1100" y="490" width="420" height="110" fill="#FFE0B2" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="1310" y="515" font-size="13" font-weight="bold" text-anchor="middle">AWS Nova Models</text>
+  <text x="1200" y="540" font-size="10" text-anchor="middle">Nova Multimodal</text>
+  <text x="1200" y="555" font-size="10" text-anchor="middle">Embeddings</text>
+  <text x="1200" y="570" font-size="10" text-anchor="middle">1024-dim vectors</text>
+  <text x="1200" y="585" font-size="9" text-anchor="middle" fill="#E65100">$0.001/segment</text>
+  
+  <text x="1420" y="540" font-size="10" text-anchor="middle">Nova 2 Lite</text>
+  <text x="1420" y="555" font-size="10" text-anchor="middle">LLM</text>
+  <text x="1420" y="570" font-size="10" text-anchor="middle">Text generation</text>
+  <text x="1420" y="585" font-size="9" text-anchor="middle" fill="#E65100">$0.30/M tokens</text>
+  
+  <!-- Computer Vision -->
+  <rect x="880" y="620" width="640" height="80" fill="#FFFFFF" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="1200" y="645" font-size="13" font-weight="bold" text-anchor="middle">👁️ Computer Vision Pipeline</text>
+  <text x="980" y="665" font-size="10" text-anchor="middle">MediaPipe</text>
+  <text x="980" y="680" font-size="10" text-anchor="middle">Face Detection</text>
+  
+  <text x="1200" y="665" font-size="10" text-anchor="middle">OpenCV</text>
+  <text x="1200" y="680" font-size="10" text-anchor="middle">Video Processing</text>
+  
+  <text x="1420" y="665" font-size="10" text-anchor="middle">FFmpeg</text>
+  <text x="1420" y="680" font-size="10" text-anchor="middle">Segmentation</text>
+  
+  <!-- Data Layer -->
+  <rect x="50" y="760" width="1500" height="280" fill="#E1F5FE" stroke="#03A9F4" stroke-width="3" rx="10"/>
+  <text x="800" y="790" font-size="18" font-weight="bold" text-anchor="middle">💾 DATA LAYER</text>
+  
+  <!-- PostgreSQL -->
+  <rect x="100" y="810" width="200" height="200" fill="#FFFFFF" stroke="#0288D1" stroke-width="2" rx="5"/>
+  <text x="200" y="835" font-size="13" font-weight="bold" text-anchor="middle">🐘 PostgreSQL</text>
+  <text x="200" y="855" font-size="10" text-anchor="middle">Primary Database</text>
+  <text x="200" y="875" font-size="9" text-anchor="middle">• Videos metadata</text>
+  <text x="200" y="890" font-size="9" text-anchor="middle">• User accounts</text>
+  <text x="200" y="905" font-size="9" text-anchor="middle">• Search history</text>
+  <text x="200" y="920" font-size="9" text-anchor="middle">• Anomalies</text>
+  <text x="200" y="935" font-size="9" text-anchor="middle">• Audit logs</text>
+  <text x="200" y="955" font-size="10" text-anchor="middle" fill="#01579B">AWS RDS</text>
+  <text x="200" y="975" font-size="10" text-anchor="middle" fill="#01579B">db.t3.medium</text>
+  
+  <!-- Qdrant -->
+  <rect x="330" y="810" width="200" height="200" fill="#FFFFFF" stroke="#0288D1" stroke-width="2" rx="5"/>
+  <text x="430" y="835" font-size="13" font-weight="bold" text-anchor="middle">🔍 Qdrant</text>
+  <text x="430" y="855" font-size="10" text-anchor="middle">Vector Database</text>
+  <text x="430" y="875" font-size="9" text-anchor="middle">• Video embeddings</text>
+  <text x="430" y="890" font-size="9" text-anchor="middle">• 1024-dim vectors</text>
+  <text x="430" y="905" font-size="9" text-anchor="middle">• Cosine similarity</text>
+  <text x="430" y="920" font-size="9" text-anchor="middle">• Fast retrieval</text>
+  <text x="430" y="935" font-size="9" text-anchor="middle">• Metadata filters</text>
+  <text x="430" y="955" font-size="10" text-anchor="middle" fill="#01579B">Docker Container</text>
+  <text x="430" y="975" font-size="10" text-anchor="middle" fill="#01579B">EC2 instance</text>
+  
+  <!-- Redis -->
+  <rect x="560" y="810" width="200" height="200" fill="#FFFFFF" stroke="#0288D1" stroke-width="2" rx="5"/>
+  <text x="660" y="835" font-size="13" font-weight="bold" text-anchor="middle">⚡ Redis</text>
+  <text x="660" y="855" font-size="10" text-anchor="middle">Cache + Queue</text>
+  <text x="660" y="875" font-size="9" text-anchor="middle">• Query cache</text>
+  <text x="660" y="890" font-size="9" text-anchor="middle">• Session store</text>
+  <text x="660" y="905" font-size="9" text-anchor="middle">• Celery broker</text>
+  <text x="660" y="920" font-size="9" text-anchor="middle">• Rate limiting</text>
+  <text x="660" y="935" font-size="9" text-anchor="middle">• Real-time pub/sub</text>
+  <text x="660" y="955" font-size="10" text-anchor="middle" fill="#01579B">ElastiCache</text>
+  <text x="660" y="975" font-size="10" text-anchor="middle" fill="#01579B">cache.t3.micro</text>
+  
+  <!-- S3 -->
+  <rect x="790" y="810" width="200" height="200" fill="#FFFFFF" stroke="#0288D1" stroke-width="2" rx="5"/>
+  <text x="890" y="835" font-size="13" font-weight="bold" text-anchor="middle">📦 AWS S3</text>
+  <text x="890" y="855" font-size="10" text-anchor="middle">Object Storage</text>
+  <text x="890" y="875" font-size="9" text-anchor="middle">• Raw videos</text>
+  <text x="890" y="890" font-size="9" text-anchor="middle">• Processed clips</text>
+  <text x="890" y="905" font-size="9" text-anchor="middle">• Thumbnails</text>
+  <text x="890" y="920" font-size="9" text-anchor="middle">• Exports</text>
+  <text x="890" y="935" font-size="9" text-anchor="middle">• Backups</text>
+  <text x="890" y="955" font-size="10" text-anchor="middle" fill="#01579B">Standard tier</text>
+  <text x="890" y="975" font-size="10" text-anchor="middle" fill="#01579B">+ Glacier (archive)</text>
+  
+  <!-- Monitoring -->
+  <rect x="1020" y="810" width="250" height="95" fill="#FFFFFF" stroke="#0288D1" stroke-width="2" rx="5"/>
+  <text x="1145" y="835" font-size="13" font-weight="bold" text-anchor="middle">📊 Monitoring</text>
+  <text x="1145" y="855" font-size="9" text-anchor="middle">CloudWatch (AWS)</text>
+  <text x="1145" y="870" font-size="9" text-anchor="middle">Sentry (Errors)</text>
+  <text x="1145" y="885" font-size="9" text-anchor="middle">Prometheus + Grafana</text>
+  
+  <!-- Logging -->
+  <rect x="1020" y="915" width="250" height="95" fill="#FFFFFF" stroke="#0288D1" stroke-width="2" rx="5"/>
+  <text x="1145" y="940" font-size="13" font-weight="bold" text-anchor="middle">📝 Logging</text>
+  <text x="1145" y="960" font-size="9" text-anchor="middle">Structured JSON logs</text>
+  <text x="1145" y="975" font-size="9" text-anchor="middle">CloudWatch Logs</text>
+  <text x="1145" y="990" font-size="9" text-anchor="middle">Log aggregation</text>
+  
+  <!-- Security -->
+  <rect x="1300" y="810" width="230" height="200" fill="#FFEBEE" stroke="#F44336" stroke-width="2" rx="5"/>
+  <text x="1415" y="835" font-size="13" font-weight="bold" text-anchor="middle">🔒 Security</text>
+  <text x="1415" y="860" font-size="10" text-anchor="middle">SSL/TLS (Let's Encrypt)</text>
+  <text x="1415" y="880" font-size="9" text-anchor="middle">• JWT Authentication</text>
+  <text x="1415" y="895" font-size="9" text-anchor="middle">• RBAC (Roles)</text>
+  <text x="1415" y="910" font-size="9" text-anchor="middle">• API Key Management</text>
+  <text x="1415" y="925" font-size="9" text-anchor="middle">• Rate Limiting</text>
+  <text x="1415" y="940" font-size="9" text-anchor="middle">• Audit Trail</text>
+  <text x="1415" y="955" font-size="9" text-anchor="middle">• Data Encryption</text>
+  <text x="1415" y="970" font-size="9" text-anchor="middle">• CORS Policy</text>
+  <text x="1415" y="990" font-size="10" text-anchor="middle" fill="#C62828">AWS IAM + Secrets</text>
+  
+  <!-- Cost Breakdown -->
+  <rect x="50" y="1070" width="1500" height="100" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3" rx="10"/>
+  <text x="800" y="1095" font-size="16" font-weight="bold" text-anchor="middle">💰 ESTIMATED MONTHLY COST (Production Scale)</text>
+  
+  <text x="100" y="1125" font-size="11" fill="#2E7D32">EC2 (Backend): $35/mo</text>
+  <text x="100" y="1145" font-size="11" fill="#2E7D32">EC2 (Workers): $65/mo</text>
+  
+  <text x="320" y="1125" font-size="11" fill="#2E7D32">RDS PostgreSQL: $40/mo</text>
+  <text x="320" y="1145" font-size="11" fill="#2E7D32">ElastiCache: $15/mo</text>
+  
+  <text x="540" y="1125" font-size="11" fill="#2E7D32">S3 Storage: $20/mo</text>
+  <text x="540" y="1145" font-size="11" fill="#2E7D32">CloudFront CDN: $10/mo</text>
+  
+  <text x="760" y="1125" font-size="11" fill="#E65100">Nova Embeddings: $50/mo</text>
+  <text x="760" y="1145" font-size="11" fill="#E65100">Nova 2 Lite: $30/mo</text>
+  
+  <text x="1020" y="1125" font-size="11" fill="#1565C0">Vercel (Free tier)</text>
+  <text x="1020" y="1145" font-size="11" fill="#1565C0">Monitoring: $15/mo</text>
+  
+  <text x="1280" y="1135" font-size="14" font-weight="bold" fill="#1B5E20">TOTAL: ~$280/month</text>
+  
+  <!-- Development Cost -->
+  <text x="800" y="1165" font-size="12" text-anchor="middle" fill="#D84315">
+    Development (30 days): ~$20-30 total (minimal usage, pre-generate embeddings)
+  </text>
+  
+  <!-- Data Flow Arrows -->
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2196F3"/>
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#4CAF50"/>
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#FF9800"/>
+    </marker>
+  </defs>
+  
+  <!-- Client to Load Balancer -->
+  <path d="M 300 250 L 300 320" stroke="#2196F3" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  <path d="M 1040 250 L 1040 320" stroke="#4CAF50" stroke-width="2" fill="none" marker-end="url(#arrowgreen)"/>
+  
+  <!-- Load Balancer to App -->
+  <path d="M 300 400 L 245 440" stroke="#2196F3" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  <path d="M 500 400 L 605 440" stroke="#2196F3" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  
+  <!-- App to AI -->
+  <path d="M 770 590 L 880 590" stroke="#FF9800" stroke-width="3" fill="none" marker-end="url(#arroworange)" stroke-dasharray="5,5"/>
+  <text x="820" y="580" font-size="10" fill="#FF9800">API Calls</text>
+  
+  <!-- App to Data -->
+  <path d="M 200 680 L 200 810" stroke="#4CAF50" stroke-width="2" fill="none" marker-end="url(#arrowgreen)"/>
+  <path d="M 430 680 L 430 810" stroke="#4CAF50" stroke-width="2" fill="none" marker-end="url(#arrowgreen)"/>
+  <path d="M 660 680 L 660 810" stroke="#4CAF50" stroke-width="2" fill="none" marker-end="url(#arrowgreen)"/>
+  
+  <!-- Celery to S3 -->
+  <path d="M 750 590 L 890 810" stroke="#4CAF50" stroke-width="2" fill="none" marker-end="url(#arrowgreen)"/>
+  
+</svg>
