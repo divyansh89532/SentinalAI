@@ -1,4 +1,4 @@
-# ChronoTrace - Forensic Video Intelligence Platform
+# SentinalAI - Forensic Video Intelligence Platform
 
 Turn 10,000 hours of footage into 10 seconds of answers.
 
