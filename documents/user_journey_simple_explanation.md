@@ -1,4 +1,4 @@
-# ChronoTrace - User Journey Summary
+# SentinalAI - User Journey Summary
 ## Simple, High-Level Flow Explanations
 
 ---
